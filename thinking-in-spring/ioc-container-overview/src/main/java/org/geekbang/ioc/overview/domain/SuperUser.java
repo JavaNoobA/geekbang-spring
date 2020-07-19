@@ -1,6 +1,6 @@
 package org.geekbang.ioc.overview.domain;
 
-import org.geekbang.ioc.overview.dependency.annotation.Super;
+import org.geekbang.ioc.overview.annotation.Super;
 
 /**
  * Created by eru on 2020/7/19.

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--  导入ioc-container-overview中的 xml 配置  -->
+    <import resource="dependency-lookup-context.xml"/>
+
+    <!-- 为 user Bean 建立/链接 spring-user 别名 -->
+    <alias name="user" alias="spring-user"/>
+</beans>

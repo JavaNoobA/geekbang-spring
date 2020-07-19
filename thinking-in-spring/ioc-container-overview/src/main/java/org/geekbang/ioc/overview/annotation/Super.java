@@ -1,4 +1,4 @@
-package org.geekbang.ioc.overview.dependency.annotation;
+package org.geekbang.ioc.overview.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

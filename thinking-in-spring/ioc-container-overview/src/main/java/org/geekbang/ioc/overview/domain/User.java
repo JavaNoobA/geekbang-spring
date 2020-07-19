@@ -25,6 +25,13 @@ public class User {
         this.id = id;
     }
 
+    public static User createUser(){
+        User user = new User();
+        user.setId(1L);
+        user.setName("erudev");
+        return user;
+    }
+
     @Override
     public String toString() {
         return "User{" +
