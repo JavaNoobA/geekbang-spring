@@ -1,7 +1,7 @@
 package org.geekbang.ioc.overview.dependency.lookup;
 
 import org.geekbang.ioc.overview.dependency.annotation.Super;
-import org.geekbang.ioc.overview.dependency.domain.User;
+import org.geekbang.ioc.overview.domain.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
@@ -10,6 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.util.Map;
 
 /**
+ * 依赖查找示例
  * Created by eru on 2020/7/19.
  */
 public class DependencyLookupDemo {
@@ -17,7 +18,7 @@ public class DependencyLookupDemo {
 
         // 配置 XML 配置文件
         // 启动 Spring 应用上下文
-        BeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath*:META-INF\\dependency-lookup-context.xml");
+        BeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath*:META-INF/dependency-lookup-context.xml");
         // 按照类型查找
         lookupByType(beanFactory);
         // 按照类型查找集合对象

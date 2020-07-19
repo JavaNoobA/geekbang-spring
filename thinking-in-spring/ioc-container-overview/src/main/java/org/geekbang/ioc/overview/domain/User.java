@@ -1,4 +1,4 @@
-package org.geekbang.ioc.overview.dependency.domain;
+package org.geekbang.ioc.overview.domain;
 
 /**
  * 用户类
