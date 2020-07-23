@@ -22,9 +22,9 @@ public class DependencyLookupDemo {
         // 按照类型查找
         lookupByType(beanFactory);
         // 按照类型查找集合对象
-        lookupByCollectionType(beanFactory);
+        //lookupByCollectionType(beanFactory);
         // 按照注解查找
-        lookupByAnnotation(beanFactory);
+        //lookupByAnnotation(beanFactory);
 
         //lookupInReal(beanFactory);
         //lookupInLazy(beanFactory);

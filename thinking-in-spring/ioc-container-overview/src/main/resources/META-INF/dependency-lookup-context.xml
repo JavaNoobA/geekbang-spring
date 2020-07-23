@@ -4,12 +4,21 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="user" class="org.geekbang.ioc.overview.domain.User" primary="true">
+    <bean id="user" class="org.geekbang.ioc.overview.domain.User">
         <property name="id" value="1"/>
         <property name="name" value="Miki"/>
+        <property name="city" value="BEIJING" />
+        <property name="configFileLocation" value="META-INF/user-config.properties" />
+        <property name="workCities" value="BEIJING,HANGZHOU" />
+        <property name="lifeCities">
+            <list>
+                <value>BEIJING</value>
+                <value>SHANGHAI</value>
+            </list>
+        </property>
     </bean>
 
-    <bean id="superUser" class="org.geekbang.ioc.overview.domain.SuperUser" parent="user">
+    <bean id="superUser" class="org.geekbang.ioc.overview.domain.SuperUser" parent="user"  primary="true">
         <property name="address" value="北京"/>
     </bean>
 
