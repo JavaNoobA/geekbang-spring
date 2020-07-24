@@ -12,6 +12,7 @@
         <module>spring-bean</module>
         <module>dependency-lookup</module>
         <module>dependency-injection</module>
+        <module>dependency-resource</module>
     </modules>
     <packaging>pom</packaging>
 
