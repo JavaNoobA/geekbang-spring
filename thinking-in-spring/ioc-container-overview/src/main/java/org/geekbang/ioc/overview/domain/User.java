@@ -1,8 +1,12 @@
 package org.geekbang.ioc.overview.domain;
 
 import org.geekbang.ioc.overview.enums.City;
+import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.DisposableBean;
 import org.springframework.core.io.Resource;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.util.Arrays;
 import java.util.List;
 
@@ -10,7 +14,7 @@ import java.util.List;
  * 用户类
  * Created by eru on 2020/7/19.
  */
-public class User {
+public class User implements BeanNameAware {
     private String name;
 
     private Long id;
@@ -22,6 +26,9 @@ public class User {
     private List<City> lifeCities;
 
     private Resource configFileLocation;
+
+    /** 当前 Bean 名称 */
+    private String beanName;
 
     public String getName() {
         return name;
@@ -88,5 +95,21 @@ public class User {
                 ", lifeCities=" + lifeCities +
                 ", configFileLocation=" + configFileLocation +
                 '}';
+    }
+
+    @Override
+    public void setBeanName(String name) {
+        this.beanName = name;
+    }
+
+    @PostConstruct
+    public void init(){
+        System.out.println("[" + this.beanName + "] 正在初始化...");
+    }
+
+    @PreDestroy
+    public void destroy(){
+        System.out.println("[" + this.beanName + "] 正在销毁...");
+
     }
 }
