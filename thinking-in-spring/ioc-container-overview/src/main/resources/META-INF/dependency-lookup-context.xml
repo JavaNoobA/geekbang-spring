@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="user" class="org.geekbang.ioc.overview.domain.User">
+    <bean id="user" class="org.geekbang.ioc.overview.domain.User"  primary="true">
         <property name="id" value="1"/>
         <property name="name" value="Miki"/>
         <property name="city" value="BEIJING" />
@@ -18,7 +18,7 @@
         </property>
     </bean>
 
-    <bean id="superUser" class="org.geekbang.ioc.overview.domain.SuperUser" parent="user"  primary="true">
+    <bean id="superUser" class="org.geekbang.ioc.overview.domain.SuperUser" parent="user">
         <property name="address" value="北京"/>
     </bean>
 
