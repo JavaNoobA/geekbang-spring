@@ -9,6 +9,8 @@ import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 
 import org.springframework.util.ObjectUtils;
 
+import java.util.List;
+
 /**
  * Bean 初始化 Demo
  * @author pengfei.zhao
@@ -29,6 +31,7 @@ public class BeanInstantiationLifeCycleDemo {
         System.out.println(user);
         SuperUser superUser = beanFactory.getBean(SuperUser.class);
         System.out.println(superUser);
+        List.of()
     }
 
     static class MyInstantiationBeanPostProcessor implements InstantiationAwareBeanPostProcessor{

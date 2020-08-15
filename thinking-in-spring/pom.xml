@@ -16,6 +16,7 @@
         <module>bean-scope</module>
         <module>bean-lifecycle</module>
         <module>configuration-metadata</module>
+        <module>threadandjuc</module>
     </modules>
     <packaging>pom</packaging>
 
