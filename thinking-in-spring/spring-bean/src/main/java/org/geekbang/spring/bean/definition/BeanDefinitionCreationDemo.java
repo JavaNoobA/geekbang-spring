@@ -13,17 +13,17 @@ public class BeanDefinitionCreationDemo {
     public static void main(String[] args) {
         // 1. 通过 BeanDefinitionBuilder
         BeanDefinitionBuilder builder = BeanDefinitionBuilder.genericBeanDefinition(User.class);
-        builder.addPropertyValue("id", 1)
-                .addPropertyValue("name", "spring");
-        BeanDefinition beanDefinition = builder.getBeanDefinition();
-        System.out.println(beanDefinition);
+        builder.addPropertyValue("id", 1);
+        builder.addPropertyValue("name", "erudev");
+        BeanDefinition bd = builder.getBeanDefinition();
+        System.out.println(bd);
 
         // 2. 通过 AbstractBeanDefinition 以及派生类
-        GenericBeanDefinition genericBeanDefinition = new GenericBeanDefinition();
-        genericBeanDefinition.setBeanClass(User.class);
-        MutablePropertyValues propertyValues = new MutablePropertyValues();
-        propertyValues.add("id", 1)
-                .add("name", "spring");
-        genericBeanDefinition.setPropertyValues(propertyValues);
+        GenericBeanDefinition gbf = new GenericBeanDefinition();
+        MutablePropertyValues properties = new MutablePropertyValues();
+        properties.addPropertyValue("id", 1);
+        properties.addPropertyValue("name", "erudev");
+        gbf.setPropertyValues(properties);
+        System.out.println(gbf);
     }
 }
